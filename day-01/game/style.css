@@ -1,0 +1,50 @@
+.abbas {
+  justify-content: space-around;
+}
+.dorgham {
+  display: flex;
+}
+button {
+  padding: 10px 30px;
+  background-color: black;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  width: 75%;
+  margin: 20px auto;
+}
+.medht {
+  background-color: #DDD;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+.alert {
+  background: rgba(255, 0, 0, 0.5);
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  width: 75%;
+  margin: 50px auto;
+}
+.alert-small {
+  background: rgba(255, 0, 0, 0.5);
+  color: white;
+  font-size: 18px;
+  padding: 15px;
+  width: 75%;
+  margin: 10px auto;
+}
