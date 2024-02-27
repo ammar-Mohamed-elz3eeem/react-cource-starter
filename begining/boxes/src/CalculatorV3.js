@@ -21,6 +21,12 @@ export class Calculator extends React.Component {
 				<div className="screen border">{this.state.screenText}</div>
 				<button onClick={btnClickFn}>Click to greet</button>
 				<CalculatorBox
+					first="="
+					second="C"
+					third="AC"
+					fourth="DEL"
+				></CalculatorBox>
+				<CalculatorBox
 					first="+"
 					second="-"
 					third="/"
