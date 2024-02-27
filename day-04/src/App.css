@@ -1,0 +1,77 @@
+#root {
+  width: 1280px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.w-25 {
+  width: 25%;
+}
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.gap-lg {
+  gap: 15px;
+}
+.text-6xl {
+  font-size: 100px;
+}
+.text-center {
+  text-align: center;
+}
+.bg-red-400 {
+  background: rgba(255, 0, 0, 0.4);
+}
+.text-white {
+  color: #FFFFFF;
+}
+.py-3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.px-3 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.blue-buttons button {
+  background-color: rgba(0, 20, 255, 0.4);
+}
+button {
+  width: 70px;
+}
+.gap-sm {
+  gap: 15px;
+}
+.flex-column {
+  flex-direction: column;
+}
+.form-control {
+  outline: none;
+  border: 1px solid #EEE;
+  background: transparent;
+  padding: 10px 15px;
+  width: 100%;
+}
+.grid {
+  display: grid;
+}
+.h-full {
+  height: 100%;
+}
+.place-items-center {
+  place-items: center;
+}
+.items-center {
+  align-items: center;
+}
