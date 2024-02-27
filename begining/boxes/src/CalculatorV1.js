@@ -1,9 +1,13 @@
 import React from "react";
 
+// add onClick to every button that prints the word inside the button
+// use State to hold the text that should be printed to screen
+
 export class Calculator extends React.Component {
 	render() {
 		return (
 			<div className="calculator">
+				<div className="screen">{this.state.screenText}</div>
 				<div>
 					<button>+</button>
 					<button>-</button>
