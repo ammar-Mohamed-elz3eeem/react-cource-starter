@@ -5,6 +5,7 @@ import { Calculator } from "./components/Calculator.jsx";
 import "./index.css";
 import "./App.css";
 import Search from "./components/Search.jsx";
+import HeaderMenu from "./components/HeaderMenu.jsx";
 
 // const myFunction = () => {
 // 	console.log("My Name is PC");

@@ -47,9 +47,9 @@
 .blue-buttons button {
   background-color: rgba(0, 20, 255, 0.4);
 }
-button {
+/* button {
   width: 70px;
-}
+} */
 .gap-sm {
   gap: 15px;
 }
@@ -74,4 +74,10 @@ button {
 }
 .items-center {
   align-items: center;
+}
+.list-style-none {
+  list-style: none;
+}
+.border-2 {
+  border: 1px solid #000
 }
