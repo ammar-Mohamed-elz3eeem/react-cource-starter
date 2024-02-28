@@ -23,8 +23,12 @@ function Todo(props) {
 					</div>
 				</form>
 			</div>
-			{todos.map(function (value) {
-				return <div className="todo">{value}</div>;
+			{todos.map(function (value, index) {
+				return (
+					<div key={index} className="todo">
+						{value}
+					</div>
+				);
 			})}
 		</div>
 	);
