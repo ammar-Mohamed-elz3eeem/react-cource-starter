@@ -1,37 +1,13 @@
 import React, { useRef, useState } from "react";
 
+// Make add todo disabled if user not logged in
+// use provided menu array to build the menu according to user conditions
+// use action key defined in menus to put onClick for elements that need it
+// Bounes: add button beside every todo that deletes the todo - 100
+
 function Todo(props) {
 	const todoRef = useRef();
 	const [todos, setTodos] = useState([]);
-
-	function handleSubmit(event) {
-		event.preventDefault();
-		console.log(todoRef.current);
-		console.log(todoRef.current.value);
-		setTodos([...todos, todoRef.current.value]);
-		console.log(todos);
-	}
-	return (
-		<div className="flex flex-column gap-5">
-			<div className="">
-				<form className="flex flex-row" onSubmit={handleSubmit}>
-					<div>
-						<input ref={todoRef} type="text" placeholder="Enter your todo" />
-					</div>
-					<div>
-						<input type="submit" value="Add Todo" />
-					</div>
-				</form>
-			</div>
-			{todos.map(function (value, index) {
-				return (
-					<div key={index} className="todo">
-						{value}
-					</div>
-				);
-			})}
-		</div>
-	);
 }
 
 export default Todo;

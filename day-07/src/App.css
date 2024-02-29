@@ -5,21 +5,6 @@
   text-align: center;
 }
 
-.flex  {
-  display: flex;
-}
-.flex-row {
-  flex-direction: row;
-}
-.gap-sm {
-  gap: 15px;
-}
-.list-style-none {
-  list-style: none;
-}
-.flex-column {
-  flex-direction: column;
-}
 .logo {
   height: 6em;
   padding: 1.5em;
