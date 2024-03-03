@@ -1,0 +1,15 @@
+{
+  "name": "day-09",
+  "version": "1.0.0",
+  "description": "- do something that takes time\r - do it again using setTimeout\r - how promises work",
+  "main": "async.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["","","","",""],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
