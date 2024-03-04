@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+.red-box {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+.green-box {
+  background-color: rgba(0, 255, 0, 0.6);
+}
+.green-box, .red-box {
+  padding: 5px 20px;
+  display: inline-block;
+  margin-left: 20px;
+}
+.box {
+  padding: 5px 20px;
+  background: #F0F0F0;
+  border-radius: 10px;
+  border: 2px solid #CCC;
+}
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.gap-sm {
+  gap: 15px
+}
+.max-w-50 {
+  max-width: 50%;
+  width: 100%;
+}
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.font-bold {
+  font-weight: 700;
+}
+.icon {
+  font-size: 30px;
+}

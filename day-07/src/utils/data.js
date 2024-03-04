@@ -1,10 +1,9 @@
-"FOod" !== "food";
 let SNEAKERS = [
 	{
 		id: "1",
 		colorway: "Pine Green",
 		imageUrl:
-			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_400,q_auto,w_400/v1/shoes/bkkj0lqzlwlwdwtofqxs",
+			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_1000,q_auto,w_1000/v1/shoes/bkkj0lqzlwlwdwtofqxs",
 		model: "Blazer Low 77 Vintage",
 		brand: "Nike",
 	},
@@ -12,7 +11,7 @@ let SNEAKERS = [
 		id: "2",
 		colorway: "Reverse Infrared",
 		imageUrl:
-			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_400,q_auto,w_400/v1/shoes/RPlzC_CBHjiMM4dr90gdU",
+			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_1000,q_auto,w_1000/v1/shoes/RPlzC_CBHjiMM4dr90gdU",
 		model: "Air Max 90",
 		brand: "Nike",
 	},
@@ -20,7 +19,7 @@ let SNEAKERS = [
 		id: "3",
 		colorway: "White/Black/Desert",
 		imageUrl:
-			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_400,q_auto,w_400/v1/shoes/0bf9336b-03c9-4cbd-b482-f4e80b770582",
+			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_1000,q_auto,w_1000/v1/shoes/0bf9336b-03c9-4cbd-b482-f4e80b770582",
 		model: "Court Legacy",
 		brand: "Nike",
 	},
@@ -28,7 +27,7 @@ let SNEAKERS = [
 		id: "5",
 		colorway: "Beluga 2.0",
 		imageUrl:
-			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_400,q_auto,w_400/v1/shoes/irxakb1ij0uzmcvn9szo",
+			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_1000,q_auto,w_1000/v1/shoes/irxakb1ij0uzmcvn9szo",
 		model: "Yeezy 350 v2",
 		brand: "Adidas",
 	},
@@ -36,7 +35,7 @@ let SNEAKERS = [
 		id: "6",
 		colorway: "Pumpkin Spice",
 		imageUrl:
-			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_400,q_auto,w_400/v1/shoes/g9tjjjdn476nhou1c1dj",
+			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_1000,q_auto,w_1000/v1/shoes/g9tjjjdn476nhou1c1dj",
 		model: "Grid SD",
 		brand: "Saucony",
 	},
@@ -44,7 +43,7 @@ let SNEAKERS = [
 		id: "7",
 		colorway: "Golden Coast",
 		imageUrl:
-			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_400,q_auto,w_400/v1/shoes/erg1lxa8x29h1wtbog9a",
+			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_1000,q_auto,w_1000/v1/shoes/erg1lxa8x29h1wtbog9a",
 		model: "Checkerboard Slip-On",
 		brand: "Vans",
 	},
@@ -52,36 +51,31 @@ let SNEAKERS = [
 		id: "8",
 		colorway: "Have a Nike Day",
 		imageUrl:
-			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_400,q_auto,w_400/v1/shoes/u4z27k4wyzr7bxatlfgj",
+			"https://images.mcan.sh/b_auto,c_pad,f_auto,h_1000,q_auto,w_1000/v1/shoes/u4z27k4wyzr7bxatlfgj",
 		model: "Air Max 1",
 		brand: "Nike",
 	},
 ];
 
-function findOne(filterVar, value) {
-	return SNEAKERS.find((sneaker) => {
-		sneaker[filterVar] === value;
-	});
+const brandsArray = SNEAKERS.map(function (sneaker) {
+	return sneaker.brand;
+});
+const brandsSet = new Set(brandsArray);
+
+export const brands = [...brandsSet];
+
+export function filterByBrand(brand) {
+	return SNEAKERS.filter((sneaker) => sneaker.brand === brand);
 }
 
-function findOneById(id) {
-	return findOne("id", id);
+export function findSneakersByKey(key, value) {
+	return SNEAKERS.filter((sneaker) =>
+		sneaker[key].toLowerCase().includes(value.toLowerCase())
+	);
 }
 
-function findAll(filterVar, value) {
-	return SNEAKERS.filter((sneaker) => {
-		sneaker[filterVar] === value;
-	});
+export function findAll() {
+	return SNEAKERS;
 }
 
-function filterByBrand(brand) {
-	return findAll("brand", brand);
-}
-
-function getSneakerById(id) {
-	return findOneById(id);
-}
-
-let brands = [...new Set(SNEAKERS.map((sneaker) => sneaker.brand))];
-
-export { brands, SNEAKERS, filterByBrand, getSneakerById };
+export { SNEAKERS };

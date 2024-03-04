@@ -6,10 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["","","","",""],
+  "keywords": [
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
     "fs": "^0.0.1-security"
   }
 }

@@ -43,13 +43,45 @@ const quota = 10000000;
 // 		console.log(err);
 // 	});
 
-async function data() {
-	const response = await fetch("http://localhost:3000/posts", {
-		method: "GET",
+// async function data() {
+// 	const response = await fetch("http://localhost:3000/posts", {
+// 		method: "GET",
+// 	});
+// 	const res = await response.json();
+// 	console.log(res);
+// }
+
+// data().then((varFromPromise) => {
+// 	console.log(varFromPromise);
+// });
+
+// console.log("Hello");
+
+const completedTodos = [];
+const notCompletedTodos = [];
+
+const response = fetch("https://jsonplaceholder.typicode.com/todos/", {
+	method: "GET",
+});
+response
+	.then((todos) => {
+		return todos.json();
+	})
+	.then((todos) => {
+		todos.forEach((todo) => {
+			if (todo.completed === true) {
+				completedTodos.push(todo);
+			} else {
+				notCompletedTodos.push(todo);
+			}
+		});
+	})
+	.catch((error) => {
+		console.log(error);
 	});
-	const res = await response.json();
-	console.log(res);
-}
+
+// console.log([]);
+// console.log([]);
 
 // GET
 // POST
